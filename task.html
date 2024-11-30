@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task manager page</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #84fab0, #8fd3f4);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+  }
+  
+  h1, h2 {
+    color: #b9c9ee;
+    text-align: center;
+  }
+  
+  /* Task Form */
+  .task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .task-form input,
+  .task-form textarea,
+  .task-form select,
+  .task-form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .task-form button {
+    background-color: #84fab0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .task-form button:hover {
+    background-color: #8fd3f4;
+  }
+  
+  /* Task List */
+  .task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0;
+  }
+  
+  .task-list li {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-list .task-details {
+    max-width: 80%;
+  }
+  
+  .task-list button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .task-list button:hover {
+    background-color: #ff5252;
+  }
+  .search{ width: 30px; 
+    font-family: 'Times New Roman'; 
+    width: 20px; height: 4px;
+    background: transparent; 
+    border: 1px solid rgba(46, 44, 40, 0.856);
+     margin-top: 3px; 
+    color: rgb(235, 235, 30); 
+    border-right: none; font-size: 16px; float: left;
+     padding: 10px; 
+     border-bottom-left-radius:5px; 
+     border-top-left-radius: 5px;}
+
+     
+  
+
+
+  @media (max-width: 350px) {
+    .task-form {
+      gap: 5px;
+    }
+  
+    .task-form input,
+    .task-form textarea,
+    .task-form select {
+      font-size: 14px;
+    }
+  
+    .task-list li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .task-list button {
+      margin-top: 5px;
+    }
+  }
+  
+  
+  
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <div class="task-form">
+          <input id="taskTitle" type="text" placeholder="Task Title">
+          <textarea id="taskDescription" placeholder="Task Description"></textarea>
+          <input id="taskDueDate" type="date">
+          <select id="taskPriority">
+            <option value="">Priority</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+          <button id="addTaskButton">Add Task</button>
+        </div>
+        <div>
+          <label for="filterTasks">Filter by Priority:</label>
+          <select id="filterTasks">
+            <option value="">All</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+        <h2>Your Tasks</h2>
+        <ul id="taskList" class="task-list">
+            
+        </ul>
+      </div>
+      
+      
+      <script src="app.js">
+
+      </script>
+    
+</body>
+</html>

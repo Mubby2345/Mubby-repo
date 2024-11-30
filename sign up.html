@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup-page</title>
+    <style>
+        
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+h1 {
+    font-size: 20px;
+    color: #5a67d8;
+    margin-bottom: 10px;
+}
+
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+form label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+}
+
+form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+
+}
+@media (max-width: 350px) {
+    form {
+      gap: 5px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome buddy!</h1>
+        
+    </header>
+    <form id="signup-form">
+        <label for="username">Username</label>
+        <br>
+        <input type="text" id="username" name="username" required placeholder="bobby">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="bobby@yahooo.com">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required placeholder="**********">
+        <br>
+        <label for="office role">Role</label>
+        <input type="text" id="office position" name="office role" required placeholder="office role">
+        <br>
+        <label for="date"> Date of birth</label>
+        <input type="date" id="date" name="birthdate" required>
+        <br>
+        <button type="submit">Sign Up</button>
+        <br>
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+</body>
+<script src="app.js">
+    
+</script>
+</html>
